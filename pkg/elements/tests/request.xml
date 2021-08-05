@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<soapenv:Envelope
+        xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
+        xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/'>
+    <soapenv:Body soapenv:encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'>
+        <wmls:WMLS_GetFromStore
+                xmlns:wmls='http://www.witsml.org/message/120'
+                xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+                xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+            <WMLtypeIn xsi:type='xsd:string'>log</WMLtypeIn>
+            <QueryIn xsi:type='xsd:string'><![CDATA[<?xml version='1.0' encoding='utf-8'?>
+<logs
+	xmlns="http://www.witsml.org/schemas/131" version="1.3.1.1">
+	<log uidWell="XXXXX" uidWellbore="XXXXYYY" uid="">
+		<nameWell />
+		<nameWellbore/>
+		<name />
+		<serviceCompany />
+		<runNumber />
+		<creationDate />
+		<description />
+		<indexType />
+		<startIndex uom="m" />
+		<endIndex uom="m" />
+		<indexCurve />
+		<nullValue />
+		<logParam />
+		<logCurveInfo uid="">
+			<mnemonic />
+			<classWitsml />
+			<unit />
+			<mnemAlias />
+			<alternateIndex />
+			<wellDatum />
+			<minIndex />
+			<maxIndex />
+			<minDateTimeIndex />
+			<maxDateTimeIndex />
+			<columnIndex />
+			<curveDescription />
+			<sensorOffset />
+			<dataSource />
+			<densData />
+			<traceState />
+			<traceOrigin />
+			<typeLogData />
+			<axisDefinition />
+		</logCurveInfo>
+	</log>
+</logs>
+		]]>
+            </QueryIn>
+            <OptionsIn/>
+            <CapabilitiesIn xsi:type='xsd:string'>
+                &lt;capClient xmlns='http://www.witsml.org/schemas/120' version='1.0'/>
+            </CapabilitiesIn>
+        </wmls:WMLS_GetFromStore>
+    </soapenv:Body>
+</soapenv:Envelope>
